@@ -2,21 +2,18 @@
 
 /**
  * @ngdoc function
- * @name frontendApp.controller:SkillsCtrl
+ * @name frontendApp.controller:UsersCtrl
  * @description
- * # SkillsCtrl
+ * # UsersCtrl
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('SkillsCtrl', function ($scope, Skill) {
+  .controller('UsersCtrl', function ($scope,User) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
 
-    $scope.skills = Skill.get();
-
-
-
+    $scope.users = "teste";
   });
