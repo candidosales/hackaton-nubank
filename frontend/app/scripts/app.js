@@ -54,6 +54,10 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
+      .when('/mission/add', {
+        templateUrl: 'views/mission/add.html',
+        controller: 'MissionAddCtrl',
+      })
       .otherwise({
         redirectTo: '/'
       });
