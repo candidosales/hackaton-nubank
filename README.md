@@ -11,9 +11,17 @@ git clone https://github.com/candidosales/hackaton-nubank
 Mock
 ====
 
-https://duckrails-hackaton.herokuapp.com/
+Teste: http://duck-hackaton.herokuapp.com/
+
 user: hackaton
+
 pass: hacknubank
+
+
+
+
+Real: https://hackaton-nubank.herokuapp.com
+
 
 Roadmap
 ========
