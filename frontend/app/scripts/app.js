@@ -22,23 +22,23 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        controller: 'MainCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+        controller: 'AboutCtrl'
       })
       .when('/mission', {
         templateUrl: 'views/mission.html',
-        controller: 'MissionCtrl',
-        controllerAs: 'mission'
+        controller: 'MissionCtrl'
       })
       .when('/activities', {
         templateUrl: 'views/activities.html',
-        controller: 'ActivitiesCtrl',
-        controllerAs: 'activities'
+        controller: 'ActivitiesCtrl'
+      })
+      .when('/skills', {
+        templateUrl: 'views/skills.html',
+        controller: 'SkillsCtrl'
       })
       .otherwise({
         redirectTo: '/'
