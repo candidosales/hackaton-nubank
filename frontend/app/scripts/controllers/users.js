@@ -9,11 +9,7 @@
  */
 angular.module('frontendApp')
   .controller('UsersCtrl', function ($scope,User) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
 
-    $scope.users = "teste";
+    $scope.users = User.query();
+
   });

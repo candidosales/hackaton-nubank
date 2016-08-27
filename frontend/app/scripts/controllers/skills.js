@@ -9,14 +9,7 @@
  */
 angular.module('frontendApp')
   .controller('SkillsCtrl', function ($scope, Skill) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
 
-    $scope.skills = Skill.get();
-
-
+    $scope.skills = Skill.query();
 
   });

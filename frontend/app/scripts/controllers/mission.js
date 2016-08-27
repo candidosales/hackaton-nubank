@@ -9,24 +9,8 @@
  */
 angular.module('frontendApp')
   .controller('MissionCtrl', function ($scope, Mission) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
 
-    var missions = [
-    	{
-    		id: 1,
-    		name: "teste"
-    	},
-    	{
-    		id: 2,
-    		name: "teste2"
-    	}
-    ];
-
-    $scope.missions = missions;
+    $scope.missions = Mission.query();
 
     $scope.update = function (mission) {
     	console.log(mission);

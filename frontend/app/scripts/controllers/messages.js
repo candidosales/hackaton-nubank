@@ -8,12 +8,8 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('MessagesCtrl', function ($scope) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MessagesCtrl', function ($scope, Message) {
 
-    $scope.messages = "message  ";
+    $scope.messages = Message.query();
+
   });
