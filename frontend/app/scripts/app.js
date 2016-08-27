@@ -33,7 +33,7 @@ angular
       .when('/mission', {
         templateUrl: 'views/mission.html',
         controller: 'MissionCtrl',
-        controllerAs: 'mission'
+        controllerAs: 'missionCtrl'
       })
       .when('/activities', {
         templateUrl: 'views/activities.html',

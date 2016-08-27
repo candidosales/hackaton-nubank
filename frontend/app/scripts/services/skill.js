@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc service
- * @name frontendApp.Activity
+ * @name frontendApp.Skill
  * @description
- * # Activity
+ * # Skill
  * Service in the frontendApp.
  */
 angular.module('frontendApp')
-  .service('Activity', function ($resource, APIConfig) {
+  .service('Skill', function ($resource, APIConfig) {
     // AngularJS will instantiate a singleton by calling "new" on this function
-    return $resource(APIConfig.endpoint+'activities/'+':id', { id: '@_id' }, {
+    return $resource(APIConfig.endpoint+'skills/'+':id', { id: '@_id' }, {
         update: {
           method: 'PUT'
         }
