@@ -27,4 +27,8 @@ angular.module('frontendApp')
     ]
 
     $scope.missions = missions;
+
+    $scope.update = function (mission) {
+    	console.log(mission);
+    }
   });
