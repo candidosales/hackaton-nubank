@@ -13,6 +13,9 @@ angular.module('frontendApp')
     return $resource(APIConfig.endpoint+'skills/'+':id', { id: '@_id' }, {
         update: {
           method: 'PUT'
+        },
+        query: {
+          method: 'GET'
         }
       });
   });

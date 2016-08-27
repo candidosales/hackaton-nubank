@@ -16,9 +16,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch',
-    'ng-token-auth'
-
+    'ngTouch'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -61,11 +59,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  })
-    .config(function($authProvider) {
-        $authProvider.configure({
-            apiUrl: 'http://duck-hackaton.herokuapp.com',
-            emailRegistrationPath:   '/auth',
-            emailSignInPath:         '/auth/sign_in'
-        });
-    });
+  });
