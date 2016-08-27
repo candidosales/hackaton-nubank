@@ -24,7 +24,7 @@ angular.module('frontendApp')
     		id: 2,
     		name: "teste2"
     	}
-    ]
+    ];
 
     $scope.missions = missions;
   });
