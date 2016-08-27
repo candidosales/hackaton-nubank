@@ -1,7 +1,7 @@
 <p>This is the Mission view.</p>
 <p>{{missions}}</p>
 <ul>
-	<li ng-repeat="mission in missions track by mission.id">
+	<li ng-repeat="mission in missions track by mission.id" ng-click="update(mission)">
 		{{mission.name}}
 	</li>
 </ul>
