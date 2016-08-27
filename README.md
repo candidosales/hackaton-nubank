@@ -1,6 +1,13 @@
 # Hackaton NuBank
 Hackaton NuBank
 
+
+Instruções
+============
+```
+git clone https://github.com/candidosales/hackaton-nubank
+```
+
 Roadmap
 ========
 
