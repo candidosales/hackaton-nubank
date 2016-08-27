@@ -8,7 +8,7 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('MissionCtrl', function ($scope) {
+  .controller('MissionCtrl', function ($scope, Mission) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
