@@ -44,6 +44,10 @@ angular
         templateUrl: 'views/users.html',
         controller: 'UsersCtrl'
       })
+      .when('/messages', {
+        templateUrl: 'views/messages.html',
+        controller: 'MessagesCtrl',
+      })
       .otherwise({
         redirectTo: '/'
       });
