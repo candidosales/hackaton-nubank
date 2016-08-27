@@ -50,7 +50,18 @@ angular
         templateUrl: 'views/messages.html',
         controller: 'MessagesCtrl',
       })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+    .config(function($authProvider) {
+        $authProvider.configure({
+            apiUrl: 'http://duck-hackaton.herokuapp.com',
+            emailRegistrationPath:   '/auth',
+            emailSignInPath:         '/auth/sign_in'
+        });
+    });
