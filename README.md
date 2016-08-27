@@ -1,4 +1,4 @@
-# hackaton-nubank
+# Hackaton NuBank
 Hackaton NuBank
 
 Roadmap
