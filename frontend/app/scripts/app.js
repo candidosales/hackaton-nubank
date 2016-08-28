@@ -70,6 +70,10 @@ angular
         templateUrl: 'views/mission/index.html',
         controller: 'MissionIndexCtrl',
       })
+      .when('/user/:id/show', {
+        templateUrl: 'views/user/show.html',
+        controller: 'UserShowCtrl'
+      })
       .otherwise({
         redirectTo: '/login'
       });
@@ -80,14 +84,14 @@ angular
       // console.log(user);
       // $rootScope.currentUser = user;
       if (User.get() == {}){
-        User.set(user);  
+        User.set(user);
       }
     });
     $rootScope.$on('auth:validation-error', function(ev, user) {
       // console.log(ev);
       // console.log(user);
       // $rootScope.currentUser = "";
-      User.set({});  
+      User.set({});
       $location.path('/login');
     });
     $rootScope.$on('auth:invalid', function(ev) {
