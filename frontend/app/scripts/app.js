@@ -17,8 +17,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ng-token-auth'
-
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -58,14 +57,15 @@ angular
         templateUrl: 'views/mission/add.html',
         controller: 'MissionAddCtrl',
       })
+      .when('/mission/:id', {
+        templateUrl: 'views/mission/show.html',
+        controller: 'MissionShowCtrl'
+      })
+      .when('/mission/:id/activity', {
+        templateUrl: 'views/activity/index.html',
+        controller: 'ActivityIndexCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
-  })
-    .config(function($authProvider) {
-        $authProvider.configure({
-            apiUrl: 'http://duck-hackaton.herokuapp.com',
-            emailRegistrationPath:   '/auth',
-            emailSignInPath:         '/auth/sign_in'
-        });
-    });
+  });
