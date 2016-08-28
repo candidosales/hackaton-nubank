@@ -53,17 +53,22 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
-      .when('/mission/add', {
+      .when('/user/:user_id/mission/add', {
         templateUrl: 'views/mission/add.html',
         controller: 'MissionAddCtrl',
       })
-      .when('/mission/:id', {
+      .when('/user/:user_id/mission/:id', {
         templateUrl: 'views/mission/show.html',
         controller: 'MissionShowCtrl'
       })
-      .when('/mission/:id/activity', {
+      .when('/user/:user_id/mission/:id/activity', {
         templateUrl: 'views/activity/index.html',
         controller: 'ActivityIndexCtrl'
+      })
+      .when('/user/login', {
+        templateUrl: 'views/user/login.html',
+        controller: 'UserLoginCtrl',
+        controllerAs: 'user/login'
       })
       .otherwise({
         redirectTo: '/'
