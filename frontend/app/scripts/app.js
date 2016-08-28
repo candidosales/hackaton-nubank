@@ -18,8 +18,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'ng-token-auth',
-    'angularMoment'
+    'ng-token-auth'
   ])
   .config(function ($routeProvider, $authProvider) {
     $authProvider
@@ -28,17 +27,9 @@ angular
       });
 
     $routeProvider
-      .when('/user/:user_id/mission', {
-        templateUrl: 'views/mission.html',
-        controller: 'MissionCtrl'
-      })
       .when('/skills', {
         templateUrl: 'views/skills.html',
         controller: 'SkillsCtrl'
-      })
-      .when('/users', {
-        templateUrl: 'views/users.html',
-        controller: 'UsersCtrl'
       })
       .when('/messages', {
         templateUrl: 'views/messages.html',
@@ -66,7 +57,7 @@ angular
           }
         }
       })
-      .when('/mission/:mission_id/task', {
+      .when('/user/:user_id/mission/:mission_id/task', {
         templateUrl: 'views/task/index.html',
         controller: 'TaskIndexCtrl',
         resolve: {
@@ -75,12 +66,17 @@ angular
           }
         }
       })
+      .when('/mission/index', {
+        templateUrl: 'views/mission/index.html',
+        controller: 'MissionIndexCtrl',
+        controllerAs: 'mission/index'
+      })
       .otherwise({
         redirectTo: '/login'
       });
   })
 
-  .run(function (amMoment, $rootScope, $location, User) {
+  .run(function ($rootScope, $location, User) {
     $rootScope.$on('auth:validation-success', function(ev, user) {
       // console.log(user);
       // $rootScope.currentUser = user;
@@ -99,5 +95,4 @@ angular
       console.log(ev);
       $location.path('/login');
     });
-    amMoment.changeLocale('pt-br');
   });

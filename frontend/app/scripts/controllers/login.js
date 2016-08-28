@@ -8,7 +8,7 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('LoginCtrl', function ($scope, $auth, $location) {
+  .controller('LoginCtrl', function ($scope, $auth, $location, UserServer) {
 
     $scope.login = {
         email: "",
@@ -19,9 +19,14 @@ angular.module('frontendApp')
 
         $auth.submitLogin($scope.login)
         .then(function(resp) {
-          console.log(resp);
+          // console.log(resp);
           if (resp.id) {
-            $location.path('/user/'+resp.id+'/mission/add');
+            var promise = UserServer.get({id: resp.id});
+            console.log(promise);
+            promise.then(function (user) {
+              console.log(user);
+              $location.path('/user/'+resp.id+'/mission/add');
+            })
           }
         })
         .catch(function(resp) {

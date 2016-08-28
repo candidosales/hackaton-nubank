@@ -3,6 +3,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+$color-blue: #204798;
+$color-yellow: #EBE60C;
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -89,4 +92,24 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.center-logo {
+  display: inline-block;
+  width:100%;
+}
+
+.logo {
+  text-align: center;
+  img {
+    width: 200px;
+  }
+}
+
+.btn {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: $color-blue;
 }

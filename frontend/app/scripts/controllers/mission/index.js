@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name frontendApp.controller:AboutCtrl
+ * @name frontendApp.controller:MissionIndexCtrl
  * @description
- * # AboutCtrl
+ * # MissionIndexCtrl
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('AboutCtrl', function () {
+  .controller('MissionIndexCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
