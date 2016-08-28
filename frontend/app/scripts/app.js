@@ -81,6 +81,6 @@ angular
     $rootScope.$on('auth:validation-error', function(ev, reason) {
       console.log(ev);
       console.log(reason);
-    })
+    });
     amMoment.changeLocale('pt-br');
   });
