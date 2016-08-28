@@ -8,7 +8,7 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('MissionAddCtrl', function ($scope,  $auth, $routeParams, $location, Mission) {
+  .controller('MissionAddCtrl', function ($scope,  $auth, $routeParams, $location, MissionAdmin) {
       $scope.mission = {
         mission: {
           name: "",
@@ -21,10 +21,11 @@ angular.module('frontendApp')
       }
 
       $scope.addMission = function(){
-        var mission = new Mission($scope.mission);
-        var promise = mission.$save();
+        var mission = new MissionAdmin($scope.mission);
+        console.log(mission);
+        var promise = mission.$save({user_id: $routeParams.user_id});
         promise.then(function (mission) {
-          $location.path('/mission/'+mission.id+'/task');
+          $location.path('/user/'+$routeParams.user_id+'/mission/'+mission.id+'/task');
         })
       }
   });
