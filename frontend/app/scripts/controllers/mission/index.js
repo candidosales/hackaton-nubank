@@ -9,7 +9,7 @@
  */
 angular.module('frontendApp')
   .controller('MissionIndexCtrl', function ($scope, $routeParams, Mission) {
-    $scope.missions = Mission.query({
+    $scope.userMission = Mission.query({
         user_id: $routeParams.user_id
     });
   });
