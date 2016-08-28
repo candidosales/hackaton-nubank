@@ -17,6 +17,10 @@ angular.module('frontendApp')
         get: {
           method: 'GET',
           params: {user_id: '@user_id'}
+        } ,
+        query: {
+          method: 'GET',
+          params: {user_id: '@user_id'}
         }
       });
   });

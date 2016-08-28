@@ -8,10 +8,12 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('MissionIndexCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MissionIndexCtrl', function ($scope, $routeParams, $location, Mission) {
+    $scope.userMission = Mission.query({
+        user_id: $routeParams.user_id
+    });
+
+    $scope.showMission = function(id){
+        $location.path('/user/'+$routeParams.user_id+'/mission/'+id+'/task') 
+    }
   });

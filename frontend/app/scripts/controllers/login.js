@@ -22,7 +22,6 @@ angular.module('frontendApp')
           // console.log(resp);
           if (resp.id) {
             var promise = UserServer.get({id: resp.id});
-            console.log('promise',promise);
             promise.$promise.then(function (user) {
               if (user.has_mission) {
                 $location.path('/user/'+user.id+'/mission');
