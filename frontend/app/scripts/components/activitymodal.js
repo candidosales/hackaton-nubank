@@ -4,7 +4,7 @@
  * @ngdoc component
  * @name frontendApp.ActivityModal
  * @description
- * # Activity
+ * # ActivityModal
  * Service in the frontendApp.
  */
 angular.module('frontendApp')
@@ -17,14 +17,10 @@ angular.module('frontendApp')
 	  },
 	  controller: function () {
 	    var $ctrl = this;
-	    console.log($ctrl.activity)
 
-	    // $ctrl.$onInit = function () {
-	    //   $ctrl.items = $ctrl.resolve.items;
-	    //   $ctrl.selected = {
-	    //     item: $ctrl.items[0]
-	    //   };
-	    // };
+	    $ctrl.$onInit = function () {
+	      $ctrl.activity = $ctrl.resolve.activity;
+	    };
 
 	    $ctrl.ok = function () {
 	      $ctrl.close();
