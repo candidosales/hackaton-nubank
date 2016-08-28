@@ -16,7 +16,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -55,6 +56,14 @@ angular
       .when('/mission/add', {
         templateUrl: 'views/mission/add.html',
         controller: 'MissionAddCtrl',
+      })
+      .when('/mission/:id', {
+        templateUrl: 'views/mission/show.html',
+        controller: 'MissionShowCtrl'
+      })
+      .when('/mission/:id/activity', {
+        templateUrl: 'views/activity/index.html',
+        controller: 'ActivityIndexCtrl'
       })
       .otherwise({
         redirectTo: '/'
