@@ -14,6 +14,10 @@ angular.module('frontendApp')
     });
 
     $scope.showMission = function(id){
-        $location.path('/user/'+$routeParams.user_id+'/mission/'+id+'/task') 
+        $location.path('/user/'+$routeParams.user_id+'/mission/'+id+'/task')
+    }
+
+    $scope.goMission = function(){
+      $location.path('/user/'+$routeParams.user_id+'/mission/add');
     }
   });
