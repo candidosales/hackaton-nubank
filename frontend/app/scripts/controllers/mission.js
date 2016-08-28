@@ -13,6 +13,6 @@ angular.module('frontendApp')
     $scope.missions = Mission.query();
 
     $scope.update = function (mission) {
-    	console.log(mission);
+      console.log(mission);
     };
   });
