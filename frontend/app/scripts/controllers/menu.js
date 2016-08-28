@@ -10,6 +10,7 @@
 angular.module('frontendApp')
   .controller('MenuCtrl', function ($scope, $auth, $location, User, $routeParams) {
     $scope.current_user = User.get();
+    // console.log($scope.current_user.total_xp);
 
     $scope.goProfile = function () {
       $location.path('/user/'+$routeParams.id+'/show');

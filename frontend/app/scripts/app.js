@@ -91,25 +91,13 @@ angular
 
   .run(function ($rootScope, $location, User, UserServer) {
     $rootScope.$on('auth:validation-success', function(ev, user) {
-      // console.log('validation-success');
-      // console.log(user);
-      // $rootScope.currentUser = user;
-      var curent_user = User.get();
-    //   console.log(curent_user.id);
-      if ( !curent_user.id){
-        var promise = UserServer.get({id: user.id})
+      var promise = UserServer.get({id: user.id})
 
-        promise.$promise.then(function (updatedUser) {
-          // console.log(updatedUser);
-          User.set(updatedUser);
-        })
-        // User.set(user);
-      }
+      promise.$promise.then(function (updatedUser) {
+        User.set(updatedUser);
+      })
     });
     $rootScope.$on('auth:validation-error', function(ev, user) {
-      // console.log(ev);
-      // console.log(user);
-      // $rootScope.currentUser = "";
       User.set({});
       $location.path('/login');
     });
