@@ -8,9 +8,8 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-    .controller('TaskIndexCtrl', function ($scope, $uibModal, $routeParams, Task, Login, Mission) {
-    //   $scope.user = Login.get();
-        $scope.mission = Mission.get({id: $routeParams.mission_id });
+    .controller('TaskIndexCtrl', function ($scope, $uibModal, $routeParams, Task, Mission) {
+      $scope.mission = Mission.get({id: $routeParams.mission_id });
 
       console.log($scope.mission);
       console.log($scope.tasks);
