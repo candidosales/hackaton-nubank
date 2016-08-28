@@ -22,7 +22,7 @@ angular
   ])
   .config(function ($routeProvider, $authProvider) {
     $authProvider.configure({
-        apiUrl: 'https://hackaton-nubank.herokuapp.com/'
+        apiUrl: 'https://hackaton-nubank.herokuapp.com'
     });
 
     $routeProvider
