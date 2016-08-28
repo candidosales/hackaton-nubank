@@ -31,10 +31,6 @@ angular
         templateUrl: 'views/mission.html',
         controller: 'MissionCtrl'
       })
-      .when('/activities', {
-        templateUrl: 'views/activities.html',
-        controller: 'ActivitiesCtrl'
-      })
       .when('/skills', {
         templateUrl: 'views/skills.html',
         controller: 'SkillsCtrl'
@@ -62,15 +58,21 @@ angular
       })
       .when('/user/:user_id/mission/:id', {
         templateUrl: 'views/mission/show.html',
-        controller: 'MissionShowCtrl'
-      })
-      .when('/user/:user_id/mission/:id/activity', {
-        templateUrl: 'views/activity/index.html',
-        controller: 'ActivityIndexCtrl'
+        controller: 'MissionShowCtrl',
+        resolve: {
+          auth: function($auth) {
+            return $auth.validateUser();
+          }
+        }
       })
       .when('/mission/:mission_id/task', {
         templateUrl: 'views/task/index.html',
-        controller: 'TaskIndexCtrl'
+        controller: 'TaskIndexCtrl',
+        resolve: {
+          auth: function($auth) {
+            return $auth.validateUser();
+          }
+        }
       })
       .otherwise({
         redirectTo: '/'
