@@ -33,9 +33,13 @@
             <div class="row ">
                 <form novalidate>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Escreva o seu objetivo" ng-model="mission.goal"><br>
-                        <input type="text" class="form-control" placeholder="Digite o valor do objetivo" ng-model="mission.value"><br>
-                        <input type="text" class="form-control" placeholder="Meses para alcançar o objetivo" ng-model="mission.durationMonths"><br>
+                        <input type="text" class="form-control" placeholder="Nome o seu objetivo" ng-model="mission.mission.name"><br>
+                        <input type="text" class="form-control" placeholder="Descreva seu objetivo" ng-model="mission.mission.description"><br>
+                        <input type="text" class="form-control" placeholder="Item do objetivo" ng-model="mission.mission.goal"><br>
+                        <input type="number" class="form-control" placeholder="Digite o valor do objetivo" ng-model="mission.mission.value"><br>
+                        <input type="date" class="form-control" placeholder="Quando vai iniciar?" ng-model="mission.mission.start_date"><br>
+                        <input type="date" class="form-control" placeholder="Quando vai alcançá-lo?" ng-model="mission.mission.end_date"><br>
+                        <input type="hidden" ng-model="mission.mission.user_id" />       
                         <button type="submit" class="btn btn-success pull-right" name="button" ng-click="addMission()">Cadastrar objetivo</button>
                     </div>
                 </form novalidate>
