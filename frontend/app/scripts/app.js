@@ -66,6 +66,11 @@ angular
           }
         }
       })
+      .when('/mission/index', {
+        templateUrl: 'views/mission/index.html',
+        controller: 'MissionIndexCtrl',
+        controllerAs: 'mission/index'
+      })
       .otherwise({
         redirectTo: '/login'
       });
