@@ -14,5 +14,5 @@ angular.module('frontendApp')
 
     $scope.update = function (mission) {
     	console.log(mission);
-    }
+    };
   });
