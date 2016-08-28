@@ -17,7 +17,7 @@ angular.module('frontendApp')
     };
 
     $scope.goMission = function() {
-      $location.path('/user/'+$routeParams.user_id+'/mission/');
+      $location.path('/user/'+$routeParams.id+'/mission/');
     }
 
     $scope.signOut = function() {
