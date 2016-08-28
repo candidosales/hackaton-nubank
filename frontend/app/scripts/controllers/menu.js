@@ -9,8 +9,8 @@
  */
 angular.module('frontendApp')
   .controller('MenuCtrl', function ($scope, User) {
-    console.log(User.get());
-    if (User.get() == {})
+    var user = User.get();
+    if (user == {})
       $scope.show = true;
     else
       $scope.show = false;
@@ -18,4 +18,21 @@ angular.module('frontendApp')
     $scope.showLogin = function () {
       return $scope.show;
     }
+
+    $scope.goMission = function() {
+      console.log("dsadasda");
+      $location.path('/user/'+user.id+'/mission/');
+    }
+
+    $scope.signOut = function() {
+      $auth.signOut()
+        .then(function(resp) {
+          console.log(resp);
+          $location.path('/login');
+        })
+        .catch(function(resp) {
+          console.log(resp);
+        });
+    };
+
   });

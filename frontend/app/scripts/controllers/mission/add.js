@@ -27,9 +27,4 @@ angular.module('frontendApp')
           $location.path('/mission/'+mission.id+'/task');
         })
       }
-
-      $scope.goMission = function() {
-          console.log("dsadasda");
-          $location.path('/user/'+$routeParams.user_id+'/mission/');
-      }
   });

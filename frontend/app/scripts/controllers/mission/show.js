@@ -9,11 +9,5 @@
  */
 angular.module('frontendApp')
   .controller('MissionShowCtrl', function (Mission) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-
     $scope.mission = Mission.query();
   });
