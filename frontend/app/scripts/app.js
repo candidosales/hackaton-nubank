@@ -69,10 +69,20 @@ angular
       .when('/user/:user_id/mission', {
         templateUrl: 'views/mission/index.html',
         controller: 'MissionIndexCtrl',
+        resolve: {
+          auth: function($auth) {
+            return $auth.validateUser();
+          }
+        }
       })
       .when('/user/:id/show', {
         templateUrl: 'views/user/show.html',
-        controller: 'UserShowCtrl'
+        controller: 'UserShowCtrl',
+        resolve: {
+          auth: function($auth) {
+            return $auth.validateUser();
+          }
+        }
       })
       .otherwise({
         redirectTo: '/login'
@@ -81,9 +91,11 @@ angular
 
   .run(function ($rootScope, $location, User) {
     $rootScope.$on('auth:validation-success', function(ev, user) {
-      // console.log(user);
+    //   console.log(user);
       // $rootScope.currentUser = user;
-      if (User.get() == {}){
+      var curent_user = User.get();
+    //   console.log(curent_user.id);
+      if ( !curent_user.id){
         User.set(user);
       }
     });

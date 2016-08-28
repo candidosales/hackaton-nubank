@@ -8,10 +8,7 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('UserShowCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('UserShowCtrl', function ($scope, User) {
+      console.log(User.get())
+    $scope.user = User.get();
   });
