@@ -18,7 +18,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'ng-token-auth'
+    'ng-token-auth',
+    'angularMoment'
   ])
   .config(function ($routeProvider, $authProvider) {
     $authProvider.configure({
