@@ -8,7 +8,7 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('MissionAddCtrl', function ($scope, $routeParams, $location, Mission) {
+  .controller('MissionAddCtrl', function ($scope, $auth, $location, Mission) {
 
       $scope.mission = {
         mission: {
@@ -33,10 +33,13 @@ angular.module('frontendApp')
       $scope.signOut = function(){
         $auth.signOut()
         .then(function(resp){
-            console.log("funcionou")
+          console.log(resp);
+          console.log("funcionou")
+          $location.path('/login');
         })
-        .catch(function(){
-            console.log("nopes")
+        .catch(function(resp){
+          console.log("nopes");
+          console.log(resp);
         })
       }
   });
