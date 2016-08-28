@@ -8,12 +8,10 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('MenuCtrl', function ($scope, $auth, $location, User) {
-    var user = User.get();
+  .controller('MenuCtrl', function ($scope, $auth, $location, User, $routeParams) {
 
     $scope.goMission = function() {
-      console.log("dsadasda");
-      $location.path('/user/'+user.id+'/mission/');
+      $location.path('/user/'+$routeParams.user_id+'/mission/');
     }
 
     $scope.signOut = function() {
