@@ -34,7 +34,7 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
-      .when('/mission', {
+      .when('/user/:user_id/mission', {
         templateUrl: 'views/mission.html',
         controller: 'MissionCtrl'
       })
@@ -69,6 +69,11 @@ angular
       .when('/user/:user_id/mission/:id/activity', {
         templateUrl: 'views/activity/index.html',
         controller: 'ActivityIndexCtrl'
+      })
+      .when('/user/show', {
+        templateUrl: 'views/user/show.html',
+        controller: 'UserShowCtrl',
+        controllerAs: 'user/show'
       })
       .otherwise({
         redirectTo: '/'

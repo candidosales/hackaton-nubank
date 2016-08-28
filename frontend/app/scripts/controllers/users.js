@@ -8,8 +8,12 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('UsersCtrl', function ($scope,User) {
+  .controller('UsersCtrl', function ($scope, $location, User) {
 
     $scope.users = User.query();
+
+    $scope.goProfile = function(){
+        $location.path('/user/show');
+    }
 
   });
