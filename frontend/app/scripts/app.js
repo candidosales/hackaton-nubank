@@ -22,9 +22,10 @@ angular
     'angularMoment'
   ])
   .config(function ($routeProvider, $authProvider) {
-    $authProvider.configure({
+    $authProvider
+      .configure({
         apiUrl: 'https://hackaton-nubank.herokuapp.com'
-    });
+      });
 
     $routeProvider
       .when('/user/:user_id/mission', {
@@ -75,19 +76,23 @@ angular
         }
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/login'
       });
   })
 
-  .run(function (amMoment, $rootScope, $location) {
-    $rootScope.$on('auth:validation-success', function(ev, reason) {
-      console.log(ev);
-      console.log(reason);
-    //   $location.path('/login');
+  .run(function (amMoment, $rootScope, $location, User) {
+    $rootScope.$on('auth:validation-success', function(ev, user) {
+      // console.log(user);
+      // $rootScope.currentUser = user;
+      if (User.get() == {}){
+        User.set(user);  
+      }
     });
-    $rootScope.$on('auth:validation-error', function(ev, reason) {
-      console.log(ev);
-      console.log(reason);
+    $rootScope.$on('auth:validation-error', function(ev, user) {
+      // console.log(ev);
+      // console.log(user);
+      // $rootScope.currentUser = "";
+      User.set({});  
       $location.path('/login');
     });
     $rootScope.$on('auth:invalid', function(ev) {

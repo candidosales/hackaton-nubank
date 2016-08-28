@@ -16,16 +16,16 @@ angular.module('frontendApp')
     };
     
     $scope.signIn = function(){
-        // console.log($scope.login)
 
         $auth.submitLogin($scope.login)
         .then(function(resp) {
+          console.log(resp);
           if (resp.id) {
             $location.path('/user/'+resp.id+'/mission/add');
           }
         })
         .catch(function(resp) {
-          // handle error response
+          console.log(resp);
         });
     }
   });
