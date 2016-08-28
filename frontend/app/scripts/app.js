@@ -18,8 +18,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'ng-token-auth',
-    'angularMoment'
+    'ng-token-auth'
   ])
   .config(function ($routeProvider, $authProvider) {
     $authProvider.configure({
@@ -59,26 +58,23 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
-      .when('/user/:userId/mission/add', {
+      .when('/user/:user_id/mission/add', {
         templateUrl: 'views/mission/add.html',
         controller: 'MissionAddCtrl',
       })
-      .when('/user/:userId/mission/:id', {
+      .when('/user/:user_id/mission/:id', {
         templateUrl: 'views/mission/show.html',
         controller: 'MissionShowCtrl'
       })
-      .when('/user/:userId/mission/:id/activity', {
+      .when('/user/:user_id/mission/:id/activity', {
         templateUrl: 'views/activity/index.html',
         controller: 'ActivityIndexCtrl'
       })
-      .when('/user/show', {
-        templateUrl: 'views/user/show.html',
-        controller: 'UserShowCtrl',
-        controllerAs: 'user/show'
+      .when('/mission/:mission_id/task', {
+        templateUrl: 'views/task/index.html',
+        controller: 'TaskIndexCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
-  }).run(function(amMoment) {
-    amMoment.changeLocale('pt-br');
   });
