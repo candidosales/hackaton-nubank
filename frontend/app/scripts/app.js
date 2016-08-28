@@ -17,9 +17,14 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ng-token-auth'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $authProvider) {
+    $authProvider.configure({
+        apiUrl: 'https://hackaton-nubank.herokuapp.com/'
+    });
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',

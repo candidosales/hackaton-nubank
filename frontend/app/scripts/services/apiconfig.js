@@ -9,5 +9,5 @@
  */
 angular.module('frontendApp')
   .constant('APIConfig', {
-  	'endpoint': 'http://duck-hackaton.herokuapp.com/'
+  	'endpoint': 'https://hackaton-nubank.herokuapp.com/'
   });
