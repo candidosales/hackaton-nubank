@@ -73,7 +73,7 @@ angular
       });
   })
 
-  .run(function (amMoment, $rootScope) {
+  .run(function (amMoment, $rootScope, $location) {
     $rootScope.$on('auth:validation-success', function(ev, reason) {
       console.log(ev);
       console.log(reason);
@@ -81,6 +81,10 @@ angular
     $rootScope.$on('auth:validation-error', function(ev, reason) {
       console.log(ev);
       console.log(reason);
+    });
+    $rootScope.$on('auth:invalid', function(ev) {
+      console.log(ev);
+      $location.path('/login');
     });
     amMoment.changeLocale('pt-br');
   });
