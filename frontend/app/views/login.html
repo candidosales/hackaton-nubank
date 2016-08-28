@@ -1,19 +1,23 @@
-<div class="container">
-    <div class="center-block center-logo">
-        <p class="logo">
-            <img  src="images/logo.png" />
-        </p>
+<div class="container-login">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="center-block center-logo">
+                <p class="logo">
+                    <img  src="images/logo.png" />
+                </p>
+            </div>
+            <form novalidate>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input class="form-control" type="text" ng-model="login.email" />
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input class="form-control" type="password" ng-model="login.password"/>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit" name="button" ng-click="signIn()">Entrar</button>
+            </form novalidate>
+        </div>
     </div>
-    <form novalidate>
-        <div class="form-group">
-            <label for="email">E-mail:</label>
-            <input class="form-control" type="text" ng-model="login.email" />
-        </div>
-        <div class="form-group">
-            <label for="senha">Senha:</label>
-            <input class="form-control" type="password" ng-model="login.password"/>
-        </div>
-        <button class="btn btn-primary btn-lg btn-block" type="submit" name="button" ng-click="signIn()">Entrar</button>
-    </form novalidate>
 </div>
 

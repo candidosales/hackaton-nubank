@@ -5,6 +5,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 $color-blue: #204798;
 $color-yellow: #EBE60C;
+$color-green: #16a085;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -18,6 +19,9 @@ body {
   font-family: 'Dosis', sans-serif;
 }
 
+a {
+  color: $color-blue;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -112,4 +116,31 @@ body {
 
 .btn-primary {
   background: $color-blue;
+}
+.container-login{
+  padding: 20px 0;
+}
+
+span.task-end_date {
+    font-size: 10px;
+}
+
+span.task-xp{
+    font-size: 30px;
+}
+
+.glyphicon-star {
+  color : $color-yellow;
+}
+
+.task-pending {
+  color: $color-blue;
+}
+
+.task-completed {
+  color: $color-green;
+}
+
+.task-icon {
+  font-size: 45px;
 }
