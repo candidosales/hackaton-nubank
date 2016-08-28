@@ -9,6 +9,7 @@
  */
 angular.module('frontendApp')
   .controller('MenuCtrl', function ($scope, $auth, $location, User, $routeParams) {
+    var user = User.get();
 
     $scope.goMission = function() {
       $location.path('/user/'+$routeParams.user_id+'/mission/');
