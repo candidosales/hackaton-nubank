@@ -8,8 +8,8 @@
  * Service in the frontendApp.
  */
 angular.module('frontendApp')
-  .component('activityModal', {
-	  templateUrl: 'views/modal/activity.html',
+  .component('taskModal', {
+	  templateUrl: 'views/modal/task.html',
 	  bindings: {
 	    resolve: '<',
 	    close: '&',
@@ -19,7 +19,7 @@ angular.module('frontendApp')
 	    var $ctrl = this;
 
 	    $ctrl.$onInit = function () {
-	      $ctrl.activity = $ctrl.resolve.activity;
+	      $ctrl.task = $ctrl.resolve.task;
 	    };
 
 	    $ctrl.ok = function () {
