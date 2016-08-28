@@ -4,12 +4,12 @@
             <div class="media">
                 <div class="logo">
                     <a hef="home.html">
-                        <img src="images/yeoman.png" alt="merkery_logo" class="hidden-xs hidden-sm img-circle">
-                        <img src="images/yeoman.png" alt="merkery_logo" class="visible-xs visible-sm circle-logo">
+                        <img src="images/yeoman.png" alt="merkery_logo" class="hidden-xs hidden-sm img-circle img-responsive center-block">
+                        <img src="images/yeoman.png" alt="merkery_logo" class="visible-xs visible-sm circle-logo img-responsive center-block">
                     </a>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">Nome</h4>
+                    <h4 class="media-heading text-center" style="margin-top:10px;">Nome</h4>
                     <div class="progress pull-center">
                         <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">
                           10 xp
@@ -19,13 +19,13 @@
             </div>
 
             <div class="navi">
-                <ul>
-                    <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
-                    <li><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Workflow</span></a></li>
-                    <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Statistics</span></a></li>
-                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation" class="active"><a href="#"><span class="hidden-xs hidden-sm"><span class="glyphicon glyphicon-cog"></span> Perfil</span></a></li>
+                    <li role="presentation"><a href="#"></i><span class="hidden-xs hidden-sm"><span class="glyphicon glyphicon-tasks"></span> Missões</span></a></li>
+                    <li role="presentation"><a href="#"><span class="hidden-xs hidden-sm"><span class="glyphicon glyphicon-log-out"></span> Logout</span></a></li>
+                    <!-- <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
                     <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
-                    <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
+                    <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li> -->
                 </ul>
             </div>
         </div>
@@ -33,13 +33,12 @@
             <div class="row ">
                 <form novalidate>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Escreva o seu objetivo"><br>
-                        <input type="text" class="form-control" placeholder="Digite o valor do objetivo"><br>
-                        <input type="text" class="form-control" placeholder="Meses para alcançar o objetivo"><br>
+                        <input type="text" class="form-control" placeholder="Escreva o seu objetivo" ng-model="mission.goal"><br>
+                        <input type="text" class="form-control" placeholder="Digite o valor do objetivo" ng-model="mission.value"><br>
+                        <input type="text" class="form-control" placeholder="Meses para alcançar o objetivo" ng-model="mission.durationMonths"><br>
                         <button type="submit" class="btn btn-success pull-right" name="button" ng-click="addMission()">Cadastrar objetivo</button>
                     </div>
                 </form novalidate>
             </div>
-        </div>
     </div>
 </div>

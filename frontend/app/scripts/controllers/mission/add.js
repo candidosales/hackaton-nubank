@@ -9,12 +9,17 @@
  */
 angular.module('frontendApp')
   .controller('MissionAddCtrl', function ($scope, $location, Mission) {
-      $scope.mission = {goal:"", prize:"", moth:""}
+      $scope.mission = {
+      	goal:"", 
+      	value:"", 
+      	durationMonths:""
+      }
 
       $scope.addMission = function(){
-          console.log($scope.mission);
-        //   Mission.save($scope.mission);
-        console.log($location.path());
-          $location.path('/mission/:id/add');
+        var mission = new Mission($scope.mission);
+        var promise = mission.$save();
+        promise.then(function (mission) {
+          $location.path('/mission/'+mission.id+'/activity');
+        })
       }
   });
