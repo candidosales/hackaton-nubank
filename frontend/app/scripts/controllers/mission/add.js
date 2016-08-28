@@ -26,7 +26,7 @@ angular.module('frontendApp')
         var mission = new Mission($scope.mission);
         var promise = mission.$save();
         promise.then(function (mission) {
-          $location.path('/mission/'+mission.id+'/activity');
+          $location.path('/user/'+mission.user_id+'/mission/'+mission.id+'/activity');
         })
       }
 
