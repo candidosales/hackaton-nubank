@@ -8,6 +8,10 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('MenuCtrl', function () {
-    
+  .controller('MenuCtrl', function ($scope, User) {
+    $scope.show = true;
+
+    $scope.showLogin = function () {
+      return $scope.show;
+    }
   });
