@@ -10,9 +10,6 @@
 angular.module('frontendApp')
   .controller('MissionAddCtrl', function ($scope, $routeParams, $location, Mission) {
 
-      console.log($routeParams);
-
-
       $scope.mission = {
         mission: {
           name: "",
@@ -31,5 +28,15 @@ angular.module('frontendApp')
         promise.then(function (mission) {
           $location.path('/mission/'+mission.id+'/activity');
         })
+      }
+
+      $scope.signOut = function(){
+          $auth.signOut()
+          .then(function(resp){
+              console.log("funcionou")
+          })
+          .catch(function(){
+              console.log("nopes")
+          })
       }
   });
