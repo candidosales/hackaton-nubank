@@ -8,11 +8,18 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('MissionAddCtrl', function ($scope, $location, $auth, Mission) {
+  .controller('MissionAddCtrl', function ($scope, $routeParams, $location, Mission) {
+
       $scope.mission = {
-      	goal:"",
-      	value:"",
-      	durationMonths:""
+        mission: {
+          name: "",
+          description: "",
+          goal:"", 
+          value:"", 
+          start_date: new Date(),
+          end_date: new Date(),
+          user_id: $routeParams.userId
+        }
       }
 
       $scope.addMission = function(){
