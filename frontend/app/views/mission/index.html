@@ -1,7 +1,7 @@
 <div class="list-group">
-<h1></h1>
+<h1>Missões</h1>
 <!-- <p>{{missions}}</p> -->
-  <a href="" class="list-group-item" ng-repeat="mission in userMission.missions track by mission.id">
+  <a href="" class="list-group-item" ng-repeat="mission in userMission.missions track by mission.id" ng-click="showMission(mission.id)">
     <h4 class="list-group-item-heading">{{mission.name}}</h4>
     <!-- <p class="list-group-item-text">
         <strong>Descrição:</strong> {{task.description}} <br>
