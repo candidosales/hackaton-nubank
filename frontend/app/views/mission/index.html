@@ -1,16 +1,14 @@
 <div class="list-group">
-<h1>Missões</h1>
+<h1><span class="glyphicon glyphicon-star"></span> MISSÕES</h1>
 <!-- <p>{{missions}}</p> -->
   <a href="" class="list-group-item" ng-repeat="mission in userMission.missions track by mission.id" ng-click="showMission(mission.id)">
-    <h4 class="list-group-item-heading">{{mission.name}}</h4>
-    <!-- <p class="list-group-item-text">
-        <strong>Descrição:</strong> {{task.description}} <br>
-        <strong class=text-right>Valor: </strong>{{task.value}}
-        <strong>xp: </strong>{{task.xp}} <br>
-        <strong>Início: </strong>{{task.start_date | date : 'dd'/'MM'/'yyyy': pt_BR}}
-        <span></span>
-        <strong>Término: </strong>{{task.end_date | date : 'dd'/'MM'/'yyyy': pt_BR}} <br>
-        <strong>Preço: </strong>{{task.prize}} <br>
-    </p> -->
+    <div class="row">
+      <div class="col-md-10 col-xs-10">
+        <h4 class="list-group-item-heading">{{mission.name}}</h4>
+      </div>
+      <div class="col-md-2  col-xs-2">
+        <span class="label label-primary">{{mission.tasks.length}}</span>
+      </div>
+    </div>
   </a>
 </div>
