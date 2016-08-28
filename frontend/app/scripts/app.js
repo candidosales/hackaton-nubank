@@ -66,10 +66,9 @@ angular
           }
         }
       })
-      .when('/mission/index', {
+      .when('/user/:user_id/mission', {
         templateUrl: 'views/mission/index.html',
         controller: 'MissionIndexCtrl',
-        controllerAs: 'mission/index'
       })
       .otherwise({
         redirectTo: '/login'
