@@ -18,8 +18,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'ng-token-auth',
-    'angularMoment'
+    'ng-token-auth'
   ])
   .config(function ($routeProvider, $authProvider) {
     $authProvider
@@ -35,10 +34,6 @@ angular
       .when('/skills', {
         templateUrl: 'views/skills.html',
         controller: 'SkillsCtrl'
-      })
-      .when('/users', {
-        templateUrl: 'views/users.html',
-        controller: 'UsersCtrl'
       })
       .when('/messages', {
         templateUrl: 'views/messages.html',
@@ -80,7 +75,7 @@ angular
       });
   })
 
-  .run(function (amMoment, $rootScope, $location, User) {
+  .run(function ($rootScope, $location, User) {
     $rootScope.$on('auth:validation-success', function(ev, user) {
       // console.log(user);
       // $rootScope.currentUser = user;
@@ -99,5 +94,4 @@ angular
       console.log(ev);
       $location.path('/login');
     });
-    amMoment.changeLocale('pt-br');
   });
