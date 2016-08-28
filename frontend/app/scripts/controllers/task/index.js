@@ -27,6 +27,11 @@ angular.module('frontendApp')
           }
         });
 
+        $scope.goMission = function() {
+            console.log("dsadasda");
+            $location.path('/user/'+$routeParams.user_id+'/mission/');
+        }
+
         modalInstance.result.then(function () {
           // console.log('aqui');
         }, function () {

@@ -28,7 +28,7 @@ angular.module('frontendApp')
         })
       }
 
-      $scope.goMission = function(){
+      $scope.goMission = function() {
           console.log("dsadasda");
           $location.path('/user/'+$routeParams.user_id+'/mission/');
       }
