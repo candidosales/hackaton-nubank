@@ -20,7 +20,7 @@
 
             <div class="navi">
                 <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation"><a ng-click="goProfile()"><span class="hidden-xs hidden-sm"><span class="glyphicon glyphicon-cog"></span> Perfil</span></a></li>
+                    <li role="presentation"><a href="" ng-click="goProfile()"><span class="hidden-xs hidden-sm"><span class="glyphicon glyphicon-cog"></span> Perfil</span></a></li>
                     <li role="presentation"><a href="" ng-click="goMission()"></i><span class="hidden-xs hidden-sm"><span class="glyphicon glyphicon-tasks"></span> Missões</span></a></li>
                     <li role="presentation"><a href="" ng-click="signOut()"><span class="hidden-xs hidden-sm"><span class="glyphicon glyphicon-log-out"></span> Logout</span></a></li>
                 </ul>
@@ -34,17 +34,17 @@
                             Nome de seu objetivo?
                         </label>
                         <input type="text" class="form-control" placeholder="Nome o seu objetivo" ng-model="mission.mission.name"><br>
-                        
+
                         <label class="">
                             Descreva seu objetivo?
                         </label>
                         <input type="text" class="form-control" placeholder="Descreva seu objetivo" ng-model="mission.mission.description"><br>
-                        
+
                         <label class="">
                             Qual item?
                         </label>
                         <input type="text" class="form-control" placeholder="Item do objetivo" ng-model="mission.mission.goal"><br>
-                        
+
                         <label class="">
                             Valor do item?
                         </label>
@@ -68,7 +68,7 @@
                         </select>
 
                         <input type="hidden" ng-model="mission.mission.user_id" />
-                        
+
                         <button type="submit" class="btn btn-success pull-right" name="button" ng-click="addMission()">Cadastrar objetivo</button>
                     </div>
                 </form novalidate>
