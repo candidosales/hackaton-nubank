@@ -8,11 +8,13 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('MissionAddCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-    $scope.addMission = "teste";
+  .controller('MissionAddCtrl', function ($scope, $location, Mission) {
+      $scope.mission = {goal:"", prize:"", moth:""}
+
+      $scope.addMission = function(){
+          console.log($scope.mission);
+        //   Mission.save($scope.mission);
+        console.log($location.path());
+          $location.path('/mission/:id/add');
+      }
   });
