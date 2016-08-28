@@ -45,9 +45,9 @@
                 <div class="row ">
                     <form novalidate>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Escreva o seu objetivo"><br>
-                            <input type="text" class="form-control" placeholder="Digite o valor do objetivo"><br>
-                            <input type="text" class="form-control" placeholder="Meses para alcançar o objetivo"><br>
+                            <input type="text" class="form-control" placeholder="Escreva o seu objetivo" ng-model="mission.goal"><br>
+                            <input type="text" class="form-control" placeholder="Digite o valor do objetivo" ng-model="mission.value"><br>
+                            <input type="text" class="form-control" placeholder="Meses para alcançar o objetivo" ng-model="mission.durationMonths"><br>
                             <button type="submit" class="btn btn-success pull-right" name="button" ng-click="addMission()">Cadastrar objetivo</button>
                         </div>
                     </form novalidate>
