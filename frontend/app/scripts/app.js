@@ -70,11 +70,6 @@ angular
         templateUrl: 'views/activity/index.html',
         controller: 'ActivityIndexCtrl'
       })
-      .when('/user/login', {
-        templateUrl: 'views/user/login.html',
-        controller: 'UserLoginCtrl',
-        controllerAs: 'user/login'
-      })
       .otherwise({
         redirectTo: '/'
       });
