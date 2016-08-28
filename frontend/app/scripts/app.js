@@ -89,14 +89,21 @@ angular
       });
   })
 
-  .run(function ($rootScope, $location, User) {
+  .run(function ($rootScope, $location, User, UserServer) {
     $rootScope.$on('auth:validation-success', function(ev, user) {
-    //   console.log(user);
+      // console.log('validation-success');
+      // console.log(user);
       // $rootScope.currentUser = user;
       var curent_user = User.get();
     //   console.log(curent_user.id);
       if ( !curent_user.id){
-        User.set(user);
+        var promise = UserServer.get({id: user.id})
+
+        promise.$promise.then(function (updatedUser) {
+          // console.log(updatedUser);
+          User.set(updatedUser);
+        })
+        // User.set(user);
       }
     });
     $rootScope.$on('auth:validation-error', function(ev, user) {

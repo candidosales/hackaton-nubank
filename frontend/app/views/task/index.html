@@ -1,6 +1,6 @@
 <div class="list-group">
 <h1><i class="mission-star glyphicon glyphicon-star"/> MISSÃO <small>{{mission.name}}</small></h1>
-  <a href="" class="list-group-item" ng-repeat="task in mission.tasks track by task.id">
+  <a href="" class="list-group-item" ng-repeat="task in mission.tasks track by task.id" ng-click="showTask(task)">
     <h4 class="list-group-item-heading">{{task.title}}</h4>
     <p class="list-group-item-text">
       <div class="row">

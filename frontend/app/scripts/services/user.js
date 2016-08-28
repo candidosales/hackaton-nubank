@@ -12,10 +12,10 @@ angular.module('frontendApp')
     var user = {};
 
     this.get = function () {
-      return user;
+      return angular.fromJson(sessionStorage.userService);
     };
 
     this.set = function (userData) {
-      user = userData;
+      sessionStorage.userService = angular.toJson(userData);
     };
   });

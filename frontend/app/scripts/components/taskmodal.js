@@ -23,11 +23,11 @@ angular.module('frontendApp')
 	    };
 
 	    $ctrl.ok = function () {
-	      $ctrl.close();
+	      $ctrl.close({$value: $ctrl.task});
 	    };
 
-	    // $ctrl.cancel = function () {
-	    //   $ctrl.dismiss({$value: 'cancel'});
-	    // };
+	    $ctrl.cancel = function () {
+	      $ctrl.dismiss({$value: 'cancel'});
+	    };
 	  }
 });

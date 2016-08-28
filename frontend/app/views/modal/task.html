@@ -1,9 +1,11 @@
 <div class="modal-header">
-  <h3 class="modal-title" id="modal-title">{{$ctrl.activity.name}}</h3>
+  <h3 class="modal-title" id="modal-title">Caramba! Que sensacional!</h3>
 </div>
 <div class="modal-body" id="modal-body">
-  <p>{{$ctrl.activity.description}}</p>
+	<p>Você acabou de finalizar a atividade <b>{{$ctrl.task.description}}</b>. Ela valia {{$ctrl.task.xp}} pontos de XP e {{$ctrl.task.value | currency:"R$"}}. </p>
+  <p>Para seguir adiante e conseguir seus pontos, clique em um dos botões abaixo. </p>
 </div>
 <div class="modal-footer">
-  <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+  <button class="btn btn-success" type="button" ng-click="$ctrl.ok()">Completei! =)</button>
+  <button class="btn btn-danger" type="button" ng-click="$ctrl.cancel()">Não completei =(</button>
 </div>
