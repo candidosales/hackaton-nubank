@@ -1,58 +1,45 @@
-
-    <div class="container row">
-        <div class="row-eq-height">
-            <div class=" container col-md-3 panel panel-default">
-                <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 panel panel-default">
+            <div class="media">
                 <div class="logo">
-                    <a hef="home.html"><img src="images/yeoman.png" alt="merkery_logo" class="hidden-xs hidden-sm">
+                    <a hef="home.html">
+                        <img src="images/yeoman.png" alt="merkery_logo" class="hidden-xs hidden-sm img-circle">
                         <img src="images/yeoman.png" alt="merkery_logo" class="visible-xs visible-sm circle-logo">
                     </a>
                 </div>
-                <div class="navi">
-                    <ul>
-                        <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
-                        <li><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Workflow</span></a></li>
-                        <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Statistics</span></a></li>
-                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
-                        <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
-                        <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
-                    </ul>
-                </div>
-            </div>
-                <!-- <div class="row">
-                    <img src="images/yeoman.png" alt="" class="img-circle" style="border:2px solid black">
-                    <h1>Teste</h1>
-                    <div class="row">
-                        <div class="col-md-11">
-                            <p class="lead">
-                                XP
-                            </p>
-                            <div class="progress pull-center">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
-                                <span class="sr-only">10 XP</span>
-                              </div>
-                            </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Nome</h4>
+                    <div class="progress pull-center">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">
+                          10 xp
                         </div>
                     </div>
-
-                </div> -->
-                <div class="row">
-
                 </div>
-
             </div>
-            <div class="containter col-md-8 pull-right ">
-                <div class="row ">
-                    <form novalidate>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Escreva o seu objetivo"><br>
-                            <input type="text" class="form-control" placeholder="Digite o valor do objetivo"><br>
-                            <input type="text" class="form-control" placeholder="Meses para alcançar o objetivo"><br>
-                            <button type="submit" class="btn btn-success pull-right" name="button" ng-click="addMission()">Cadastrar objetivo</button>
-                        </div>
-                    </form novalidate>
-                </div>
 
+            <div class="navi">
+                <ul>
+                    <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
+                    <li><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Workflow</span></a></li>
+                    <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Statistics</span></a></li>
+                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
+                    <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
+                    <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="containter col-md-8 pull-right ">
+            <div class="row ">
+                <form novalidate>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Escreva o seu objetivo"><br>
+                        <input type="text" class="form-control" placeholder="Digite o valor do objetivo"><br>
+                        <input type="text" class="form-control" placeholder="Meses para alcançar o objetivo"><br>
+                        <button type="submit" class="btn btn-success pull-right" name="button" ng-click="addMission()">Cadastrar objetivo</button>
+                    </div>
+                </form novalidate>
             </div>
         </div>
     </div>
+</div>
