@@ -26,14 +26,6 @@ angular
     });
 
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
       .when('/user/:user_id/mission', {
         templateUrl: 'views/mission.html',
         controller: 'MissionCtrl'
@@ -61,6 +53,11 @@ angular
       .when('/user/:user_id/mission/add', {
         templateUrl: 'views/mission/add.html',
         controller: 'MissionAddCtrl',
+        resolve: {
+          auth: function($auth) {
+            return $auth.validateUser();
+          }
+        }
       })
       .when('/user/:user_id/mission/:id', {
         templateUrl: 'views/mission/show.html',
@@ -77,4 +74,16 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+
+  .run(function (amMoment, $rootScope) {
+    $rootScope.$on('auth:validation-success', function(ev, reason) {
+      console.log(ev);
+      console.log(reason);
+    });
+    $rootScope.$on('auth:validation-error', function(ev, reason) {
+      console.log(ev);
+      console.log(reason);
+    });
+    amMoment.changeLocale('pt-br');
   });

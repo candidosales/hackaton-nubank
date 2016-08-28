@@ -20,4 +20,5 @@ angular.module('frontendApp')
         console.log("dsadasda");
         $location.path('/user/'+user.id+'/mission/');
     }
+
   });

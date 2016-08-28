@@ -20,7 +20,6 @@ angular.module('frontendApp')
 
         $auth.submitLogin($scope.login)
         .then(function(resp) {
-          console.log(resp);
           if (resp.id) {
             $location.path('/user/'+resp.id+'/mission/add');
           }

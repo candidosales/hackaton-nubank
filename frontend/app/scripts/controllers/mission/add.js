@@ -31,12 +31,12 @@ angular.module('frontendApp')
       }
 
       $scope.signOut = function(){
-          $auth.signOut()
-          .then(function(resp){
-              console.log("funcionou")
-          })
-          .catch(function(){
-              console.log("nopes")
-          })
+        $auth.signOut()
+        .then(function(resp){
+            console.log("funcionou")
+        })
+        .catch(function(){
+            console.log("nopes")
+        })
       }
   });
