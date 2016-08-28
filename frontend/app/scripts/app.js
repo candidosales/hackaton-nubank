@@ -27,10 +27,6 @@ angular
       });
 
     $routeProvider
-      .when('/user/:user_id/mission', {
-        templateUrl: 'views/mission.html',
-        controller: 'MissionCtrl'
-      })
       .when('/skills', {
         templateUrl: 'views/skills.html',
         controller: 'SkillsCtrl'
@@ -61,7 +57,7 @@ angular
           }
         }
       })
-      .when('/mission/:mission_id/task', {
+      .when('/user/:user_id/mission/:mission_id/task', {
         templateUrl: 'views/task/index.html',
         controller: 'TaskIndexCtrl',
         resolve: {
