@@ -30,13 +30,45 @@
             <div class="row ">
                 <form novalidate>
                     <div class="form-group">
+                        <label class="">
+                            Nome de seu objetivo?
+                        </label>
                         <input type="text" class="form-control" placeholder="Nome o seu objetivo" ng-model="mission.mission.name"><br>
+                        
+                        <label class="">
+                            Descreva seu objetivo?
+                        </label>
                         <input type="text" class="form-control" placeholder="Descreva seu objetivo" ng-model="mission.mission.description"><br>
+                        
+                        <label class="">
+                            Qual item?
+                        </label>
                         <input type="text" class="form-control" placeholder="Item do objetivo" ng-model="mission.mission.goal"><br>
+                        
+                        <label class="">
+                            Valor do item?
+                        </label>
                         <input type="number" class="form-control" placeholder="Digite o valor do objetivo" ng-model="mission.mission.value"><br>
-                        <input type="date" class="form-control" placeholder="Quando vai iniciar?" ng-model="mission.mission.start_date"><br>
-                        <input type="date" class="form-control" placeholder="Quando vai alcançá-lo?" ng-model="mission.mission.end_date"><br>
+                        <label class="">
+                            Você quer atingir o objetivo em quanto tempo?
+                        </label>
+                        <select class="form-control" ng-model="mission.mission.duration_month">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+
                         <input type="hidden" ng-model="mission.mission.user_id" />
+                        
                         <button type="submit" class="btn btn-success pull-right" name="button" ng-click="addMission()">Cadastrar objetivo</button>
                     </div>
                 </form novalidate>

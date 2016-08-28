@@ -8,10 +8,12 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('MissionShowCtrl', function () {
+  .controller('MissionShowCtrl', function (Mission) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+    $scope.mission = Mission.query();
   });

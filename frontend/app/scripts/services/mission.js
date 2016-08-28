@@ -13,6 +13,9 @@ angular.module('frontendApp')
     return $resource(APIConfig.endpoint+'admin/missions/:id', { id: '@_id' }, {
         update: {
           method: 'POST'
+        },
+        get: {
+          method: 'GET'
         }
       });
   });
