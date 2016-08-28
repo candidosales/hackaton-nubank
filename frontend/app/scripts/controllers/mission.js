@@ -15,10 +15,4 @@ angular.module('frontendApp')
     $scope.update = function (mission) {
     	console.log(mission);
     }
-
-    $scope.goMission = function(){
-        console.log("dsadasda");
-        $location.path('/user/'+user.id+'/mission/');
-    }
-
   });

@@ -83,7 +83,7 @@ angular
     $rootScope.$on('auth:validation-success', function(ev, reason) {
       console.log(ev);
       console.log(reason);
-      $location.path('/login');
+    //   $location.path('/login');
     });
     $rootScope.$on('auth:validation-error', function(ev, reason) {
       console.log(ev);

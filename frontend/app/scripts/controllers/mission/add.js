@@ -28,16 +28,8 @@ angular.module('frontendApp')
         })
       }
 
-      $scope.signOut = function(){
-        $auth.signOut()
-        .then(function(resp){
-          console.log(resp);
-          console.log("funcionou")
-          $location.path('/login');
-        })
-        .catch(function(resp){
-          console.log("nopes");
-          console.log(resp);
-        })
+      $scope.goMission = function(){
+          console.log("dsadasda");
+          $location.path('/user/'+$routeParams.user_id+'/mission/');
       }
   });
