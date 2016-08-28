@@ -9,7 +9,6 @@
  */
 angular.module('frontendApp')
     .controller('TaskIndexCtrl', function ($scope, $uibModal, $routeParams, Task, Mission) {
-      console.log($routeParams);
       $scope.mission = Mission.get({id: $routeParams.mission_id, user_id: $routeParams.user_id });
 
       $scope.showTask = function (task_id) {
