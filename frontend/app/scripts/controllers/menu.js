@@ -8,16 +8,8 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('MenuCtrl', function ($scope, User) {
+  .controller('MenuCtrl', function ($scope, $auth, $location, User) {
     var user = User.get();
-    if (user == {})
-      $scope.show = true;
-    else
-      $scope.show = false;
-
-    $scope.showLogin = function () {
-      return $scope.show;
-    }
 
     $scope.goMission = function() {
       console.log("dsadasda");
